@@ -18,7 +18,7 @@ SJT 通过 JVMTI `ClassFileLoadHook` 解密 classfile。原版同时申请 `can_
 - `docs/SJT-OTel加密插桩问题分析与解决方案.md`：完整中文分析文档。
 - `docs/COMPATIBILITY.md`：兼容补丁设计、回归结果和风险边界。
 - `verification/patch-manifest.json`：逐库 SHA-256、偏移、前后指令和验证记录。
-- `native/`：native 原始/补丁库、反汇编、符号和字符串证据。
+- `native/`：native 原始/补丁库，以及保留的字符串和运行库信息；详细反汇编证据不随仓库分发。
 - `verification/probe/`、`verification/integration/`：运行验证日志和指标结果。
 
 ## 平台补丁位置
@@ -71,4 +71,4 @@ Windows、Linux、ARM 目前完成静态指令/数据流和归档完整性验证
 - 兼容版 SHA-256：`4ca7f63765a9d04d922fded78a59ba0602c8e222738b56b86725086e187a3d18`
 - 原版 SHA-256：`8163f2221a115ef51364a1f8924842f53904bfc1595bb14633d47a91b941a89a`
 
-这是固定版本的实验性兼容补丁，不是供应商正式发布版本。升级 JAR、JDK、OTel 或应用后，应重新反汇编、核验哈希并执行完整验证。
+这是固定版本的实验性兼容补丁，不是供应商正式发布版本。升级 JAR、JDK、OTel 或应用后，应重新反汇编、核验哈希并执行完整验证。构建工具会在临时 `build-output/` 中生成反汇编文件，仓库不保留这些大文件。

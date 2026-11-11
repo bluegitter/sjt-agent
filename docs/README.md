@@ -48,8 +48,8 @@ the patched artifacts instead.
 - Original backup: `sjt_agent-before-8163f2221a11.jar` in this directory.
 - Original SHA-256: `8163f2221a115ef51364a1f8924842f53904bfc1595bb14633d47a91b941a89a`.
 - Output SHA-256: `4ca7f63765a9d04d922fded78a59ba0602c8e222738b56b86725086e187a3d18`.
-- Per-library hashes/instructions: `patch-manifest.json`; disassembly under
-  `original/` and `patched/`, files ending in `.init.asm`.
+- Per-library hashes/instructions: `patch-manifest.json`. Detailed disassembly
+  is generated under the temporary build output and is not stored in this repo.
 - Builder: `../patch_all_platforms.py`, pinned to this exact original archive and
   eight library fingerprints; refuses unknown inputs and in-place builds.
 

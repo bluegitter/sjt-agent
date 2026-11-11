@@ -221,6 +221,6 @@ curl -fsS http://127.0.0.1:9466/metrics \
 - `analysis/sjt-agent/multiplatform/README.md`：多平台补丁说明与限制。
 - `analysis/sjt-agent/verify_integration.py`：加密应用集成验证。
 - `analysis/sjt-agent/verify_compat_probe.py`：类转换/重转换验证。
-- `analysis/sjt-agent/native/disassembly.txt`：macOS x64 反汇编证据。
+- `native/`：各平台原始和补丁后的 native 二进制；详细反汇编由构建工具临时生成，不纳入仓库。
 - `analysis/sjt-agent/probe/capability-layout.txt`：JVMTI 函数表偏移验证。
 
