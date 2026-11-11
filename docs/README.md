@@ -24,10 +24,10 @@ JAR, Java classes in the agent, and all other agent archive members are unchange
 Offsets refer to instruction starts in the native library file, not the JAR.
 Each new platform changes one instruction byte before any code signing.
 
-| Library | File offset | Instruction change |
+| Library | File offset | Virtual address | Instruction change |
 | --- | --- | --- |
-| sjt_windows_x64.dll | 0x65f | movl $96, 372(%rsp) -> movl $0, 372(%rsp) |
-| sjt_windows_x86.dll | 0x619 | movl $96, 152(%esp) -> movl $0, 152(%esp) |
+| sjt_windows_x64.dll | 0x65f | 0x18000125f | movl $96, 372(%rsp) -> movl $0, 372(%rsp) |
+| sjt_windows_x86.dll | 0x619 | 0x10001219 | movl $96, 152(%esp) -> movl $0, 152(%esp) |
 | sjt_linux_x64.so | 0x31b7c | movb $96, 20(%rsp) -> movb $0, 20(%rsp) |
 | sjt_linux_x86.so | 0x22eba | movb $96, 16(%esp) -> movb $0, 16(%esp) |
 | sjt_linux_a64.so | 0x91bac | mov w2, #96 -> mov w2, #0 |

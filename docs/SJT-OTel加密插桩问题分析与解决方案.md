@@ -138,10 +138,10 @@ caps.can_retransform_any_class = 0;
 
 由于没有供应商 native 源码，实际采用了版本固定、哈希校验、指令校验的二进制补丁。每个平台只修改一条设置能力掩码的指令：
 
-| 成员 | 文件偏移 | 修改 |
+| 成员 | 文件偏移 | 虚拟地址 | 修改 |
 |---|---:|---|
-| `libs/sjt_windows_x64.dll` | `0x65F` | `movl $96` → `movl $0` |
-| `libs/sjt_windows_x86.dll` | `0x619` | `movl $96` → `movl $0` |
+| `libs/sjt_windows_x64.dll` | `0x65F` | `0x18000125F` | `movl $96` → `movl $0` |
+| `libs/sjt_windows_x86.dll` | `0x619` | `0x10001219` | `movl $96` → `movl $0` |
 | `libs/sjt_linux_x64.so` | `0x31B7C` | `movb $96` → `movb $0` |
 | `libs/sjt_linux_x86.so` | `0x22EBA` | `movb $96` → `movb $0` |
 | `libs/sjt_linux_a64.so` | `0x91BAC` | `mov w2,#96` → `mov w2,#0` |

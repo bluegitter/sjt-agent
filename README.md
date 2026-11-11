@@ -17,16 +17,16 @@ SJT 通过 JVMTI `ClassFileLoadHook` 解密 classfile。原版同时申请 `can_
 - `tools/verify_compat_probe.py`、`tools/verify_integration.py`：类重转换和加密应用验证工具。
 - `docs/SJT-OTel加密插桩问题分析与解决方案.md`：完整中文分析文档。
 - `docs/COMPATIBILITY.md`：兼容补丁设计、回归结果和风险边界。
-- `evidence/patch-manifest.json`：逐库 SHA-256、偏移、前后指令和验证记录。
-- `evidence/native/`：native 原始/补丁库、反汇编、符号和字符串证据。
-- `evidence/probe/`、`evidence/integration/`：运行验证日志和指标结果。
+- `verification/patch-manifest.json`：逐库 SHA-256、偏移、前后指令和验证记录。
+- `native/`：native 原始/补丁库、反汇编、符号和字符串证据。
+- `verification/probe/`、`verification/integration/`：运行验证日志和指标结果。
 
 ## 平台补丁位置
 
-| 平台库 | 文件偏移 | 修改 |
-|---|---:|---|
-| `sjt_windows_x64.dll` | `0x65f` | `movl $96` → `movl $0` |
-| `sjt_windows_x86.dll` | `0x619` | `movl $96` → `movl $0` |
+| 平台库 | 文件偏移 | 虚拟地址 | 修改 |
+|---|---:|---:|---|
+| `sjt_windows_x64.dll` | `0x65f` | `0x18000125f` | `movl $96` → `movl $0` |
+| `sjt_windows_x86.dll` | `0x619` | `0x10001219` | `movl $96` → `movl $0` |
 | `sjt_linux_x64.so` | `0x31b7c` | `movb $96` → `movb $0` |
 | `sjt_linux_x86.so` | `0x22eba` | `movb $96` → `movb $0` |
 | `sjt_linux_a64.so` | `0x91bac` | `mov w2,#96` → `mov w2,#0` |
@@ -52,7 +52,7 @@ python3 -m unittest discover -s tools -p 'test_patch_all_platforms.py' -v
 
 ## 运行验证
 
-本机 macOS x86-64/JDK 17 已验证：GenericServlet 和 HttpServlet 的首次插桩及重转换成功；加密应用 20 次健康请求加 3 次 404 请求后，HTTP histogram count 增量为 23，OTel transformation failures 为 0。可参考 `evidence/integration/`。
+本机 macOS x86-64/JDK 17 已验证：GenericServlet 和 HttpServlet 的首次插桩及重转换成功；加密应用 20 次健康请求加 3 次 404 请求后，HTTP histogram count 增量为 23，OTel transformation failures 为 0。可参考 `verification/integration/`。
 
 检查实际 HTTP 指标：
 

@@ -14,7 +14,7 @@ import zipfile
 
 
 ROOT = Path(__file__).resolve().parents[1]
-EVIDENCE = ROOT / "evidence"
+EVIDENCE = ROOT / "build-output"
 SOURCE_SHA256 = "8163f2221a115ef51364a1f8924842f53904bfc1595bb14633d47a91b941a89a"
 
 

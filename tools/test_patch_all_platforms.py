@@ -10,7 +10,7 @@ import patch_all_platforms as patcher
 class MultiPlatformPatchTests(unittest.TestCase):
     def setUp(self):
         # Immutable pre-patch fixtures allow verification after installing the new JAR.
-        self.original = patcher.EVIDENCE / "original"
+        self.original = patcher.ROOT / "native/original"
 
     def test_all_eight_reviewed_libraries_are_covered(self):
         self.assertEqual(len(patcher.PROFILES), 8)
