@@ -1,0 +1,27 @@
+{
+  "case": "compatible",
+  "agent_sha256": "4ca7f63765a9d04d922fded78a59ba0602c8e222738b56b86725086e187a3d18",
+  "business_health": 200,
+  "management_health": 200,
+  "successful_test_requests": 20,
+  "not_found_test_requests": 3,
+  "http_count_before": 2.0,
+  "http_count_after": 25.0,
+  "http_count_delta": 23.0,
+  "transformation_failures": 0,
+  "transformed_servlet_classes": [
+    "javax.servlet.AsyncContext",
+    "javax.servlet.Filter",
+    "javax.servlet.GenericFilter",
+    "javax.servlet.GenericServlet",
+    "javax.servlet.Servlet",
+    "javax.servlet.ServletOutputStream",
+    "javax.servlet.ServletRequest",
+    "javax.servlet.ServletRequestWrapper",
+    "javax.servlet.http.HttpServlet",
+    "javax.servlet.http.HttpServletRequest",
+    "javax.servlet.http.HttpServletRequestWrapper",
+    "javax.servlet.http.HttpServletResponse"
+  ],
+  "console_log": "analysis/sjt-agent/multiplatform/integration/compatible/console.log"
+}

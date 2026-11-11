@@ -1,0 +1,45 @@
+
+analysis/sjt-agent/multiplatform/original/sjt_linux_x86.so:	file format elf32-i386
+
+SYMBOL TABLE:
+00000000  w      *UND*	00000000 
+00000000  w      *UND*	00000000 _ITM_deregisterTMCloneTable
+00000000       F *UND*	00000000 printf
+00000000  w      *UND*	00000000 
+00000000       F *UND*	00000000 free
+00000000       F *UND*	00000000 memcpy
+00000000  w    F *UND*	00000000 __cxa_finalize
+00000000       F *UND*	00000000 malloc
+00000000       F *UND*	00000000 puts
+00000000  w      *UND*	00000000 __gmon_start__
+00000000       F *UND*	00000000 putchar
+00000000       F *UND*	00000000 sprintf
+00000000  w      *UND*	00000000 
+00000000  w      *UND*	00000000 _ITM_registerTMCloneTable
+00000000       F *UND*	00000000 calloc
+00023010 g     F .text	00000022 JNI_OnLoad
+00022ff0 g     F .text	0000001d Agent_OnLoad
+00000000       F *UND*	00000000 strcmp
+00000000       F *UND*	00000000 malloc
+00000000       F *UND*	00000000 memset
+00000000       F *UND*	00000000 sysconf
+00000000       F *UND*	00000000 mmap
+00000000       F *UND*	00000000 mprotect
+00000000       F *UND*	00000000 memcpy
+00000000       F *UND*	00000000 puts
+00000000       F *UND*	00000000 exit
+00000000       F *UND*	00000000 dlopen
+00000000       F *UND*	00000000 dlerror
+00000000       F *UND*	00000000 strstr
+00000000       F *UND*	00000000 strcat
+00000000       F *UND*	00000000 readlink
+00000000       F *UND*	00000000 fopen
+00000000       F *UND*	00000000 strchr
+00000000       F *UND*	00000000 strtoull
+00000000       F *UND*	00000000 fgets
+00000000       F *UND*	00000000 fclose
+00000000       F *UND*	00000000 dlsym
+00000000       F *UND*	00000000 dlclose
+00000000       F *UND*	00000000 printf
+00000000       F *UND*	00000000 free
+00000000       F *UND*	00000000 munmap

@@ -1,0 +1,1 @@
+0x000000010e841000 	/private/var/folders/ss/37qzm8193qjdqpfn8ncsqz540000gn/T/sjt_darwin_x64.dylib754175183106444589sense

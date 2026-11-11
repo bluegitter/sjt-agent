@@ -1,0 +1,8 @@
+can_retransform_classes=1
+can_retransform_any_class=1
+can_generate_all_class_hook_events=1
+Allocate_offset=0x168
+AddCapabilities_offset=0x468
+SetEventCallbacks_offset=0x3c8
+SetEventNotificationMode_offset=0x8
+ClassFileLoadHook_callback_offset=0x20
